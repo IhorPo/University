@@ -22,3 +22,13 @@ Provides a user-friendly interface that allows administrators to efficiently han
 - mysql-connector-j
 - lombok
 - spring-boot-starter-thymeleaf
+## What the app looks like
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_1.png)
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_2.png)
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_3.png)
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_4.png)
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_5.png)
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_6.png)
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_7.png)
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_8.png)
+![alt text](https://github.com/IhorPo/University/blob/master/screenshots/Screenshot_9.png)
