@@ -12,7 +12,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Entity
 @Table(name = "Student")
-public class StudentPojo {
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -25,7 +25,7 @@ public class StudentPojo {
     @Enumerated(EnumType.STRING)
     private Group studentGroup;
 
-    public StudentPojo(String name, String surname, String email, Group studentGroup) {
+    public Student(String name, String surname, String email, Group studentGroup) {
         this.name = name;
         this.surname = surname;
         this.email = email;

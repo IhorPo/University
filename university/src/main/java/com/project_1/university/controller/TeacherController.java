@@ -1,16 +1,11 @@
 package com.project_1.university.controller;
 
-import com.project_1.university.models.StudentPojo;
-import com.project_1.university.models.TeacherPojo;
+import com.project_1.university.models.Teacher;
 import com.project_1.university.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("university/teachers")
@@ -35,12 +30,12 @@ public class TeacherController {
 
     @GetMapping("/new")
     public String form(Model model){
-        model.addAttribute("teacher",new TeacherPojo());
+        model.addAttribute("teacher",new Teacher());
         return "teacherForm";
     }
 
     @PostMapping
-    public String save(TeacherPojo teacher){
+    public String save(Teacher teacher){
         try {
             service.add(teacher);
         } catch (Exception e){
@@ -57,7 +52,7 @@ public class TeacherController {
     }
 
     @PostMapping("/editSave")
-    public String editSave(@ModelAttribute("student") TeacherPojo teacher){
+    public String editSave(@ModelAttribute("student") Teacher teacher){
         service.update(teacher);
         return "redirect:/university/teachers";
     }

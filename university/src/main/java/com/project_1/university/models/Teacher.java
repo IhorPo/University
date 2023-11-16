@@ -10,7 +10,7 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 @Entity
-public class TeacherPojo {
+public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -21,7 +21,7 @@ public class TeacherPojo {
     @Column(name = "teacherEmail", columnDefinition = "VARCHAR(75)")
     private String email;
 
-    public TeacherPojo(String firstName, String surname, String email) {
+    public Teacher(String firstName, String surname, String email) {
         this.name = name;
         this.surname = surname;
         this.email = email;
