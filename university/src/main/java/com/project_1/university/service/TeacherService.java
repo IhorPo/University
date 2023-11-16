@@ -1,7 +1,7 @@
 package com.project_1.university.service;
 
 import com.project_1.university.dataAccessLayer.TeacherRepository;
-import com.project_1.university.models.TeacherPojo;
+import com.project_1.university.models.Teacher;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,24 +16,24 @@ public class TeacherService {
         this.repository = repository;
     }
 
-    public List<TeacherPojo> getAll(){
+    public List<Teacher> getAll(){
         return repository.findAll();
     }
 
-    public TeacherPojo getById(Integer id){
+    public Teacher getById(Integer id){
         return repository.findById(id).orElseThrow(
                 () -> new NoSuchElementException("No such teacher")
         );
     }
 
-    public TeacherPojo add(TeacherPojo teacher){
+    public Teacher add(Teacher teacher){
         return repository.save(teacher);
     }
 
-    public TeacherPojo update(TeacherPojo teacher){
-        Optional<TeacherPojo> teacher1 = repository.findById(teacher.getId());
+    public Teacher update(Teacher teacher){
+        Optional<Teacher> teacher1 = repository.findById(teacher.getId());
         if(teacher1.isPresent()){
-            TeacherPojo teacher2 = teacher1.get();
+            Teacher teacher2 = teacher1.get();
             teacher2.setName(teacher.getName());
             teacher2.setSurname(teacher.getSurname());
             teacher2.setEmail(teacher.getEmail());
@@ -44,7 +44,7 @@ public class TeacherService {
     }
 
     public void delete(Integer id){
-        TeacherPojo teacher = repository.findById(id).orElseThrow(
+        Teacher teacher = repository.findById(id).orElseThrow(
                 () -> new NoSuchElementException("No such teacher")
         );
         repository.delete(teacher);
